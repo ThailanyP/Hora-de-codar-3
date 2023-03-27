@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinco</title>
+</head>
+<body>
+    <h4> 
+        <a href="inicio.html">Voltar</a>
+    </h4>
+</body>
+<script>
+
+var numero1 = parseInt(prompt("Informe o primeiro número inteiro:"));
+var numero2 = parseInt(prompt("Informe o segundo número inteiro:"));
+
+var media = (numero1 + numero2) / 2;
+
+var soma = 0;
+var quantidade = 0;
+
+for (var i = numero1; i <= numero2; i++) {
+  soma += i;
+  quantidade++;
+}
+
+var mediaEntreNumeros = soma / quantidade;
+
+document.write("A média aritmética dos números " + numero1 + " e " + numero2 + " é " + media.toFixed(2) + "<br>");
+document.write("A média aritmética dos números inteiros entre " + numero1 + " e " + numero2 + " é " + mediaEntreNumeros.toFixed(2) + "<br>");
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seis</title>
+</head>
+<body>
+    <h4> 
+        <a href="inicio.html">Voltar</a>
+    </h4>
+</body>
+<script>
+    var alunosAprovados = 0;
+
+do {
+  // Lê as notas do aluno
+  var nota1 = parseFloat(prompt("Digite a primeira nota do aluno:"));
+  var nota2 = parseFloat(prompt("Digite a segunda nota do aluno:"));
+
+  // Calcula a média das notas
+  var media = (nota1 + nota2) / 2;
+
+  // Verifica se o aluno foi aprovado
+  if (media >= 9.5) {
+    alunosAprovados++;
+    document.write("O aluno foi aprovado com média " + media.toFixed(2) + "<br>");
+  } else {
+    document.write("O aluno foi reprovado com média " + media.toFixed(2) + "<br>");
+  }
+
+  // Pergunta ao usuário se deseja calcular a média de outro aluno
+  var resposta = prompt("Calcular a média de outro aluno? (S/N)").toUpperCase();
+
+} while (resposta == "S");
+
+window.alert("Foram aprovados " + alunosAprovados + " alunos.");
+
+   
+</script>
+</html>
